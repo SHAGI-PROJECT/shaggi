@@ -30,13 +30,13 @@ const config = {
     AUTO_LIKE_EMOJI: ['💗', '🧚‍♂️', '🪄', '💓', '🙂', '💌', '❤️‍🩹', '🥺', '💚', '💜'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/FYsbo9QWv2K6wEjN7plbmg?mode=ems_copy_t',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DyQZz7kjaiEB1IPxuFNKUr?mode=wwt',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: './teddyfree.jpg',
-    NEWSLETTER_JID: '120363402466616623@newsletter',
-    NEWSLETTER_MESSAGE_ID: '428',
-    OTP_EXPIRY: 300000,    OWNER_NUMBER: '94763007898',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBS2jj5PO19q0EybP23'
+    RCD_IMAGE_PATH: './shagi.jpg.jpeg',
+    NEWSLETTER_JID: '1............1',
+    NEWSLETTER_MESSAGE_ID: '42',
+    OTP_EXPIRY: 300000,    OWNER_NUMBER: '94740021158',
+    CHANNEL_LINK: 'ht'
 };
 
 const t = "Y8mBNY9xBVfjlCaT1jTf7aC0yDqb751QnQ2C"
@@ -163,9 +163,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '🧚‍♂️𝐓𝙴𝙳𝙳𝚈 𝐅ʀᴇᴇ 𝐁ᴏᴛ🧚‍♂️',
+        '🧚‍♂️Shagi-Md🧚‍♂️',
         `📞 𝙽𝚄𝙼𝙱𝙴𝚁: ${number}\n🩵 𝚂𝚃𝙰𝚃𝚄𝚂: 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳`,
-        '> 𝐏ᴏᴡᴇʀᴅ ʙʏ 𝐓ᴇᴅᴇʏ ❗'
+        '> powred by old king shagi ❗'
     );
 
     for (const admin of admins) {
@@ -188,7 +188,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ'
+        'Shagi-Md'
     );
 
     try {
@@ -201,7 +201,7 @@ async function sendOTP(socket, number, otp) {
 }
 
 async function updateAboutStatus(socket) {
-    const aboutStatus = 'ᴅᴏʀᴀ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ //  ᴀᴄᴛɪᴠᴇ 🚀';
+    const aboutStatus = 'SHAGI MD BOT //  ᴀᴄᴛɪᴠᴇ 🚀';
     try {
         await socket.updateProfileStatus(aboutStatus);
         console.log(`Updated About status to: ${aboutStatus}`);
@@ -211,7 +211,7 @@ async function updateAboutStatus(socket) {
 }
 
 async function updateStoryStatus(socket) {
-    const statusMessage = `ᴅᴏʀᴀ ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ..! 🚀\nᴄᴏɴɴᴇᴄᴛᴇᴅ ᴀᴛ: ${getSriLankaTimestamp()}`;
+    const statusMessage = `shagi-md-v1-connected...! 🚀\nᴄᴏɴɴᴇᴄᴛᴇᴅ ᴀᴛ: ${getSriLankaTimestamp()}`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -320,7 +320,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n🧚‍♂️ From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '> 𝐏ᴏᴡᴇʀᴅ ʙʏ 𝐃ᴏʀᴀ ❗'
+            '> powred by old king shagi ❗'
         );
 
         try {
@@ -388,7 +388,7 @@ function setupCommandHandlers(socket, number) {
     const channelStatus = config.NEWSLETTER_JID ? '✅ Followed' : '❌ Not followed';
     
     const botInfo = `
-╭〘-𝐅ʀᴇᴇᴅᴏᴍ-𝐌ɪɴɪ-𝐁ᴏᴛ 〙 ───
+╭〘-SHAGI MD MINI 〙 ───
 │   🌐 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: 𝚅 1
 │
 ╭〘 📊 SESSION INFO 〙 ──
@@ -418,17 +418,17 @@ function setupCommandHandlers(socket, number) {
     await socket.sendMessage(sender, {
         image: { url: config.RCD_IMAGE_PATH },
         caption: formatMessage(
-            '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️',
+            '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️',
             botInfo,
-            '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️'
+            '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️'
         ),
         contextInfo: {
-            mentionedJid: ['94763007898@s.whatsapp.net'],
+            mentionedJid: ['94740021158@s.whatsapp.net'],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363402466616623@newsletter',
-                newsletterName: '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️',
+                newsletterJid: '120366623@newsletter',
+                newsletterName: 'SHAGI MD UBDATE',
                 serverMessageId: 143
             }
         }
@@ -442,11 +442,11 @@ function setupCommandHandlers(socket, number) {
             '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️',
             `┏━━━━━━━━━━━ ◉◉➢
 ┋ • *BOT INFO*
-┋ 🧚‍♂️ 𝙽𝙰𝙼𝙴: 𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ
+┋ 🧚‍♂️ 𝙽𝙰𝙼𝙴: SHAGI MD MINI BOT
 ┋ 🌐 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: 𝚅1
-┋ 👨‍💻 𝙾𝚆𝙽𝙴𝚁: 𝙲𝚈𝙱𝙴𝚁 𝙳𝙾𝚁𝙰
-┋ 🌥️ 𝙷𝙾𝚂𝚃: 𝙷𝙴𝚁𝙰𝙺𝚄
-┋ 📞 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁:94763007898
+┋ 👨‍💻 𝙾𝚆𝙽𝙴𝚁: OLD KING SHAGI
+┋ 🌥️ 𝙷𝙾𝚂𝚃: 𝙷𝙴𝚁OKU
+┋ 📞 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁:94740021158
 ┗━━━━━━━━━━━ ◉◉➢
   *➤ 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂..!! 🌐💭*
 ╔══════════════ ⭓⭓ ➤
@@ -469,15 +469,15 @@ function setupCommandHandlers(socket, number) {
 ║ ⏱️ *.𝚁𝚄𝙽𝚃𝙸𝙼𝙴* ➜ 𝚄𝙿𝚃𝙸𝙼𝙴 𝙸𝙽𝙵𝙾
 ║ ⏰ *.𝙽𝙾𝚆* ➜ 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝚃𝙸𝙼𝙴 & 𝙳𝙰𝚃𝙴
 ╚══════════════ ⭓⭓ ➣`,
-            '> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗'
+            '> POWRED BY SHAGI ❗'
         ),
         contextInfo: {
-            mentionedJid: ['94770690281@s.whatsapp.net'],
+            mentionedJid: ['94740021158@s.whatsapp.net'],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363402466616623@newsletter',
-                newsletterName: '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ 🧚‍♂️',
+                newsletterJid: '1203634026623@newsletter',
+                newsletterName: '🧚‍♂️SHAGI MD UBDATE🧚‍♂️',
                 serverMessageId: 143
             }
         }
@@ -499,14 +499,14 @@ function setupCommandHandlers(socket, number) {
             `┣ ⏺ *𝐀𝐔𝐓𝐎-𝐑𝐄𝐂𝐎𝐑𝐃𝐈𝐍𝐆:* ${config.AUTO_RECORDING}\n` +
             `┃\n` +
             `┣ 🔗 *𝙾𝚄𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂:*\n` +
-            `┃     📱 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿: https://whatsapp.com/channel/0029Vb6gcq74NVij8LWJKy1D\n` +
+            `┃     📱 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿: not avaible\n` +
             `┃\n` +
-            `┗━━━━━━━【𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ】━━━━━━◉`
+            `┗━━━━━━━【POWRED BY OLD KING SHAGI】━━━━━━◉`
     });
       case 'fc': {
     if (args.length === 0) {
         return await socket.sendMessage(sender, {
-            text: '❗ Please provide a channel JID.\n\nExample:\n.fcn 120363402466616623@newsletter'
+            text: '❗ Please provide a channel JID.\n\nExample:\n.fcn 12036346623@newsletter'
         });
     }
 
@@ -544,7 +544,7 @@ function setupCommandHandlers(socket, number) {
         const messages = {
             noCity: "❗ *Please provide a city name!* \n📋 *Usage*: .weather [city name]",
             weather: (data) => `
-*⛩️ 𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ 𝐖ᴇᴀᴛʜᴇʀ 𝐑ᴇᴘᴏʀᴛ 🌤*
+*⛩️ SHAGI MD MINI BOT WHETHER INFO 🌤*
 
 *━🌍 ${data.name}, ${data.sys.country} 🌍━*
 
@@ -566,7 +566,7 @@ function setupCommandHandlers(socket, number) {
 
 *🔽 Pressure*: ${data.main.pressure} hPa
 
-> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗
+> POWRED BY OLD KING SHAGI ❗
 `,
             cityNotFound: "🚫 *City not found!* \n🔍 Please check the spelling and try again.",
             error: "⚠️ *An error occurred!* \n🔄 Please try again later."
@@ -635,7 +635,7 @@ function setupCommandHandlers(socket, number) {
             caption: formatMessage(
                 '❌ ERROR',
                 '*🍁 Please reply to a ViewOnce message!*',
-                '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 🧚‍♂️'
+                '> SHAGI MINI BOT🧚‍♂️'
             )
         });
         break;
@@ -653,7 +653,7 @@ function setupCommandHandlers(socket, number) {
                 caption: formatMessage(
                     '🔓 DECRYPTING',
                     'Decrypting the ViewOnce Message...',
-                    '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                    '> SHAGI MINI BOT  🧚‍♂️'
                 )
             };
             const sentMessage = await socket.sendMessage(sender, decryptingMessage, { quoted: msg });
@@ -698,7 +698,7 @@ function setupCommandHandlers(socket, number) {
                         caption: formatMessage(
                             '❌ ERROR',
                             'Only ViewOnce image, video, and audio messages are supported',
-                            '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                            '> SHAGI MINI BOT  🧚‍♂️'
                         )
                     });
                     await socket.sendMessage(sender, { delete: sentMessage.key });
@@ -711,7 +711,7 @@ function setupCommandHandlers(socket, number) {
                 caption: formatMessage(
                     '✅ SUCCESS',
                     'ViewOnce message decrypted and sent successfully!',
-                    '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                    '> SHAGI MINI BOT 🧚‍♂️'
                 )
             });
         } else {
@@ -720,7 +720,7 @@ function setupCommandHandlers(socket, number) {
                 caption: formatMessage(
                     '❌ ERROR',
                     '*🍁 Please reply to a ViewOnce message!*',
-                    '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                    '> SHAGI MINI BOT  🧚‍♂️'
                 )
             });
         }
@@ -731,7 +731,7 @@ function setupCommandHandlers(socket, number) {
             caption: formatMessage(
                 '❌ ERROR',
                 `Error decrypting ViewOnce message: ${error.message}`,
-                '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                '> SHAGI MINI BOT 🧚‍♂️'
             )
         });
     }
@@ -744,7 +744,7 @@ function setupCommandHandlers(socket, number) {
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'Please provide a phone number! Usage: .winfo +94xxxxxxxxx',
-                                '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                                '> SHAGI MINI BOT🧚‍♂️'
                             )
                         });
                         break;
@@ -757,7 +757,7 @@ function setupCommandHandlers(socket, number) {
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'Invalid phone number! Please include country code (e.g., +94712345678)',
-                                '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                                '> SHAGI MINI BOT 🧚‍♂️'
                             )
                         });
                         break;
@@ -771,7 +771,7 @@ function setupCommandHandlers(socket, number) {
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'User not found on WhatsApp',
-                                '> 𝐓𝙴𝙳𝙳𝚈 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃  🧚‍♂️'
+                                '> SHAGI MINI BOT 🧚‍♂️'
                             )
                         });
                         break;
@@ -781,7 +781,8 @@ function setupCommandHandlers(socket, number) {
                     try {
                         winfoPpUrl = await socket.profilePictureUrl(winfoJid, 'image');
                     } catch {
-                        winfoPpUrl = 'https://i.ibb.co/KhYC4FY/1221bc0bdd2354b42b293317ff2adbcf-icon.png';
+                        winfoPpUrl = 'https://files.catbox.moe/2tc773.jpeg
+';
                     }
 
                     let winfoName = winfoJid.split('@')[0];
@@ -962,7 +963,7 @@ function setupCommandHandlers(socket, number) {
                         `📝 *𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽:* ${result.desc || "N/A"}\n` +
                         `🎞 *𝚀𝚄𝙴𝙻𝙸𝚃𝚈:* ${quality}\n` +
                         `╰──────────────◆\n\n` +
-                        `© 🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️`;
+                        `© 🧚‍♂️SHAGI MINI BOT🧚‍♂️`;
 
         await socket.sendMessage(sender, {
             video: { url: videoUrl },
@@ -982,8 +983,8 @@ function setupCommandHandlers(socket, number) {
          }
                 case 'owner': {
     const ownerNumber = '94763007898';
-    const ownerName = '𝐂𝐘𝐁𝐄𝐑 𝐃𝐎𝐑𝐀';
-    const organization = '*𝐃𝐎𝐑𝐀-𝐌𝐃* 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃 𝙳𝙴𝚅𝙰𝙻𝙾𝙿𝙴𝚁 🍬';
+    const ownerName = 'SHAGI';
+    const organization = '*SHAGI MD* 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃 𝙳𝙴𝚅𝙰𝙻𝙾𝙿𝙴𝚁 🍬';
 
     const vcard = 'BEGIN:VCARD\n' +
                   'VERSION:3.0\n' +
@@ -1003,7 +1004,7 @@ function setupCommandHandlers(socket, number) {
 
         // Then send message with reference
         await socket.sendMessage(from, {
-            text: `*𝐃𝐎𝐑𝐀 𝐌𝐃 𝐎𝐖𝐍𝐄𝐑𝐒*\n\n👤 𝐍𝐀𝐌𝐄: ${ownerName}\n📞 𝐍𝐔𝐌𝐁𝐄𝐑: ${ownerNumber}\n\n> 𝐏ᴏᴡᴇʀᴅ ʙʏ 𝐃ᴏʀᴀ`,
+            text: `*SHAGI MD OWNER*\n\n👤 𝐍𝐀𝐌𝐄: ${ownerName}\n📞 𝐍𝐔𝐌𝐁𝐄𝐑: ${ownerNumber}\n\n> POWRED BY SHAGI`,
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`],
                 quotedMessageId: sent.key.id
@@ -1069,7 +1070,7 @@ function setupCommandHandlers(socket, number) {
                     case 'boom': {
                     if (args.length < 2) {
                         return await socket.sendMessage(sender, { 
-                            text: "📛 *𝚄𝚂𝙰𝙶𝙴:* `.boom <𝙲𝙾𝚄𝙽𝚃> <𝙼𝙴𝚂𝚂𝙰𝙶𝙴>`\n📌 *𝙴𝚇𝙰𝙼𝙿𝙻𝙴:* `.boom 50 𝚃𝙴𝙳𝙳𝚈-𝙵𝚁𝙴𝙴 𝙱𝙾𝚃*`" 
+                            text: "📛 *𝚄𝚂𝙰𝙶𝙴:* `.boom <𝙲𝙾𝚄𝙽𝚃> <𝙼𝙴𝚂𝚂𝙰𝙶𝙴>`\n📌 *𝙴𝚇𝙰𝙼𝙿𝙻𝙴:* `.boom 50 SHAGI-𝙵𝚁𝙴𝙴 𝙱𝙾𝚃*`" 
                         });
                     }
 
@@ -1140,8 +1141,8 @@ function setupCommandHandlers(socket, number) {
 ◆ ⏱️ *𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:* ${data.ago}
 
 ───────────────
-✨ *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈:* 𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ ✨
-🔗 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: https://whatsapp.com/channel/0029Vb6gcq74NVij8LWJKy1D
+✨ *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈:* SHAGI MD MINI BOT✨
+🔗 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: NOT AVAIBLE
 
 `;
 
@@ -1221,8 +1222,8 @@ function setupCommandHandlers(socket, number) {
 ◆ ⏱️ *𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:* ${data.ago}
 
 ───────────────
-✨ *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈:* 𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ ✨
-🔗 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: https://whatsapp.com/channel/0029Vb6gcq74NVij8LWJKy1D
+✨ *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈:* SHAGI MD MINI BOT✨
+🔗 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: not avaible
 
 `;
 
@@ -1252,7 +1253,7 @@ function setupCommandHandlers(socket, number) {
                 case 'ai': {
     const axios = require("axios");
 
-    const GEMINI_API_KEY = ' මෙතනට ඔය api එකක් හදන් එකෙ කී එක දාන්න';
+    const GEMINI_API_KEY = 'AIzaSyBpsWgkJViNes9r2r1qhA6rTLf4kj-rQs0';
     const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 
     // ✅ Get user input from various message types
@@ -1263,7 +1264,7 @@ function setupCommandHandlers(socket, number) {
               '';
 
     if (!q || q.trim() === '') {
-        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම DORA MD AI 🤭" }, { quoted: msg });
+        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම SHAGI AI 🤭" }, { quoted: msg });
     }
 
     // ✅ Custom Gemini prompt (acting human with Sinhala rules)
@@ -1321,7 +1322,7 @@ function setupCommandHandlers(socket, number) {
         const dina = first.title;
         const image = first.thumbnail;
 
-        const desc = `🎬 Title - ${dina}\n🏷️ URL - ${url}\n\n© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴏʀᴀ`;         
+        const desc = `🎬 Title - ${dina}\n🏷️ URL - ${url}\n\n© POWRED BY SHAGI`;         
 
         await socket.sendMessage(sender, {             
             image: { url: image },             
@@ -1363,7 +1364,7 @@ function setupCommandHandlers(socket, number) {
                         caption: formatMessage(
                             '🏓 PING RESPONSE',
                             `🔹 𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚄𝚂: 𝙰𝙲𝚃𝙸𝚅𝙴\n🔹 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁: ${number}\n🔹 𝚂𝚃𝙰𝚃𝚄𝚂 𝙰𝚄𝚃𝙾-𝚅𝙸𝙴𝚆: ${config.AUTO_VIEW_STATUS}\n🔹 𝚂𝚃𝙰𝚃𝚄𝚂 𝙰𝚄𝚃𝙾-𝙻𝙸𝙺𝙴: ${config.AUTO_LIKE_STATUS}\n🔹 𝙰𝚄𝚃𝙾-𝚁𝙴𝙲𝙾𝚁𝙳𝙸𝙽𝙶: ${config.AUTO_RECORDING}`,
-                            '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️'
+                            '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️'
                         )
                     });
                     break;
@@ -1455,7 +1456,7 @@ function setupCommandHandlers(socket, number) {
         await socket.sendMessage(sender, {
             video: { url: result.sd },
             mimetype: 'video/mp4',
-            caption: '> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗'
+            caption: '> POWRED BY SHAGI  ❗'
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -1493,8 +1494,8 @@ function setupCommandHandlers(socket, number) {
                 `👥 *Active Sessions:* ${activeSockets.size}\n` +
                 `📱 *Your Number:* ${number}\n` +
                 `💾 *Memory Usage:* ${memoryUsage}\n\n` +
-                `> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗`,
-                '💗 𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ 💗'
+                `> POWRED BY SHAGI ❗`,
+                '💗 SHAGI MD MINI BOT 💗'
             ),
             contextInfo: { forwardingScore: 999, isForwarded: true }
         });
@@ -1554,7 +1555,7 @@ case 'cyber_ping':
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            '🧚‍♂️𝐂ʏʙᴇʀ-𝐅ʀᴇᴇᴅᴏᴍ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️'
+                            '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️'
                         )
                     });
                     break;
@@ -1567,7 +1568,7 @@ case 'cyber_ping':
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️'
+                    '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️'
                 )
             });
         }
@@ -1824,9 +1825,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '🧚‍♂️𝐃ᴏʀᴀ-𝐌ᴅ-𝐌ɪɴɪ-𝐁ᴏᴛ🧚‍♂️',
+                            '🧚‍♂️SHAGI MD MINI BOT🧚‍♂️',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n\n📋`,
-                            '> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗'
+                            '> POWRED BY SHAGI ❗'
                         )
                     });
 
@@ -2034,7 +2035,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '> 𝐏ᴏᴡᴇʀᴅ ʙʏ ᴅᴏʀᴀ ❗'
+                    '> SHAGI MD MINI BOT ❗'
                 )
             });
         }
