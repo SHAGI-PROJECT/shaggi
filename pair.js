@@ -782,7 +782,7 @@ function setupCommandHandlers(socket, number) {
                     try {
                         winfoPpUrl = await socket.profilePictureUrl(winfoJid, 'image');
                     } catch {
-                        winfoPpUrl = 'https://files.catbox.moe/2tc773.jpeg
+                        winfoPpUrl = 'https://files.catbox.moe/2tc773.jpeg'
 ';
                     }
 
