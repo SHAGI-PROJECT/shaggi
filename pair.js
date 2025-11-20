@@ -227,6 +227,7 @@ function setupNewsletterHandlers(socket) {
 
         try {
             const emojis = ['🤍', '❤️‍🩹', '🩵', '🧚‍♂️''❤️', '💛', '💗', '💚'];
+
             const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
             const messageId = message.newsletterServerId;
 
