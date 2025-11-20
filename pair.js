@@ -783,7 +783,7 @@ function setupCommandHandlers(socket, number) {
                         winfoPpUrl = await socket.profilePictureUrl(winfoJid, 'image');
                     } catch {
                         winfoPpUrl = 'https://files.catbox.moe/2tc773.jpeg'
-';
+;
                     }
 
                     let winfoName = winfoJid.split('@')[0];
